@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% if user_logged_in %}
+        <p>Logged</p>
+    {% else %}
+        <p>Not loggd in</p>
+    {% endif %}
+    <ul>
+        {% for item in sq_foot %}
+        <li>{{ item }}</li>
+        {% endfor %}
+
+        {% if 12 in sq_foot %}
+            <p>12 square foot</p>
+        {% else %}
+            <p>12 not in list</p>
+        {% endif %}
+    </ul>
+    <h1>Algorithm used: {{input_algorithm}}</h1>
+    <h2>{{input_values}}</h2>
+    <h2>{{input_dict['algorithm']}}</h2>
+    <h3>{{ sq_foot }}</h3>
+</body>
+</html>
