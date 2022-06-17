@@ -1,2 +1,9 @@
 # pip install -r requirements.txt
 flask
+flask_sqlalchemy
+flask_migrate
+flask_login
+flask_wtf
+wtforms
+Pillow
+email_validator
